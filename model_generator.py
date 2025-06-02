@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.model_selection import train_test_split
+# from sklearn.model_selection import train_test_split
 from keras.api.utils import timeseries_dataset_from_array
 import tensorflow as tf
 import numpy as np
@@ -120,7 +120,7 @@ try:
     real_future = scaler.inverse_transform(
         np.hstack([test_data[-sequence_length: -sequence_length + forecast_steps, :4], np.zeros((forecast_steps, 2))])
     )[:, :4]
-except:
+except Exception:
     real_future = None
 
 print("Predicciones (10 días x 4 ciudades):")
