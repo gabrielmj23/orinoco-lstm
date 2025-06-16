@@ -265,7 +265,7 @@ with tab2:
 
                 ax.set_title(f"Histórico y Predicción para {city.replace('_', ' ').title()}")
                 ax.set_xlabel("Fecha")
-                ax.set_ylabel("Nivel de Agua")
+                ax.set_ylabel("Nivel del Río")
                 ax.legend()
                 ax.grid(True)
                 plt.xticks(rotation=45)
